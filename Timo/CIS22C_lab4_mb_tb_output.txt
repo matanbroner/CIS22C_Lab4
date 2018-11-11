@@ -1,0 +1,80 @@
+CIS22C Lab4: Sorting int, double, char, or string arrays in descending order with insertion, quick, and merge sorts.
+Matan Broner and Timo Bitterli
+
+-----------------------
+start of program output
+-----------------------
+
+Performing sorts on int array:
+Array before sort:
+1 2 3 4 
+Insertion sort:
+2 1 3 4 
+3 2 1 4 
+4 3 2 1 
+Array after insertion sort:
+4 3 2 1 
+Quick sort:
+4 2 3 1 
+4 2 3 1 
+Array after quick sort:
+4 3 2 1 
+Merge sort:
+2 1 3 4 
+2 1 4 3 
+4 3 2 1 
+Array after merge sort:
+4 3 2 1 
+
+User called for another sort
+Performing sorts on int array:
+Array before sort:
+4 3 2 1 
+Insertion sort:
+4 3 2 1 
+4 3 2 1 
+4 3 2 1 
+Array after insertion sort:
+4 3 2 1 
+Quick sort:
+4 3 2 1 
+4 3 2 1 
+4 3 2 1 
+4 3 2 1 
+4 3 2 1 
+4 3 2 1 
+Array after quick sort:
+4 3 2 1 
+Merge sort:
+4 3 2 1 
+4 3 2 1 
+4 3 2 1 
+Array after merge sort:
+4 3 2 1 
+
+User called for another sort
+Performing sorts on string array:
+Array before sort:
+a b c d 
+Insertion sort:
+b a c d 
+c b a d 
+d c b a 
+Array after insertion sort:
+d c b a 
+Quick sort:
+d b c a 
+d b c a 
+Array after quick sort:
+d c b a 
+Merge sort:
+b a c d 
+b a d c 
+d c b a 
+Array after merge sort:
+d c b a 
+
+---------------------
+end of program output
+---------------------
+
