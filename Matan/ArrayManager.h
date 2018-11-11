@@ -77,7 +77,7 @@ bool ArrayManager<T>::readIntoArray(Array<T> &arr)
 {
     for (int i = 0; i < arr.getSize(); i++) // iterate over each index
     {
-        std::cout << "index [" << i <<"] --> ";
+        std::cout << "value at index [" << i <<"] --> ";
         std::cin >> arr[i];
         while (std::cin.fail()) // input verification
         {
@@ -93,7 +93,8 @@ bool ArrayManager<T>::readIntoArray(Array<T> &arr)
 template <typename T>
 void ArrayManager<T>::sortAndExport(Array<T>& arrayToSort)
 {
-    Array<T> temp = arrayToSort; // holds unsorted array for repeated sorting
+    Array<T> temp(arrayToSort.getSize()); // holds unsorted array for repeated sorting
+    temp.operator=(arrayToSort);
     
     // writes the date and time array was sorted for record keeping, and appends unsorted array to output file
     time_t now = time(0);
@@ -108,10 +109,8 @@ void ArrayManager<T>::sortAndExport(Array<T>& arrayToSort)
     
     // preforms merge sort and appends to output file, this method directly changes original array
     printUI(this->outputFile, "MERGE SORT\n\nSTART");
-    ArraySorter<T>::MergeSort(arrayToSort, 0, arrayToSort.getSize()-1, this->outputFile);
+    ArraySorter<T>::MergeSort(temp, 0, temp.getSize()-1, this->outputFile);
     printUI(this->outputFile, "END\n");
-    
-    arrayToSort = temp; // revert array to unsorted format for further sorting
     
     // preform quick sort and appends to output file
     printUI(this->outputFile, "QUICK SORT\n\nSTART ");

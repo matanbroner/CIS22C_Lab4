@@ -34,13 +34,13 @@ int main(int argc, const char * argv[]) {
     
     cout << "=== Lab 4 -- Array Sorter ===" << endl << endl;
     
+    cout << "File address for log: ";
+    getline(cin, fileAddress);
+    if (cin.fail())
+        invalidInputHandler<string>(fileAddress);
     
     do
     {
-        cout << "File address for log: ";
-        getline(cin, fileAddress);
-        if (cin.fail())
-            invalidInputHandler<string>(fileAddress);
         cout << "\nType of array to create and sort: " << endl;
         cout << "[1] -- int\n[2] -- double\n[3] -- char\n[4] -- string" << endl;
         cout << "--> ";
@@ -64,7 +64,7 @@ int main(int argc, const char * argv[]) {
     
         cout << "You can find a log of your sorts in the file you provided... " << endl;
     
-        cout << "Continue to a new array?...(Y/N)\n-->";
+        cout << "Continue to a new array?...(Y/N)\n--> ";
         cin >> userInput;
         while (userInput != "Y" && userInput != "N")
         {
