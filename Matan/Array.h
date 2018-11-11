@@ -124,5 +124,5 @@ void Array<T>::operator=(Array<T> &arr)
 template <typename T>
 Array<T>::~Array()
 {
-    delete[] this->arrayContainer; //--> This throws an exception, I wanted to show correct deletion of dynamic memory...
+    delete[] this->arrayContainer;
 }
