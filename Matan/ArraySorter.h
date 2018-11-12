@@ -17,7 +17,7 @@ private:
     /*
     This method merges two halves of an array whilst comparing the values at each index
      after the start of the array and after the middle of the array. It is used in
-     recursivley sotting an array by the merge sort method.
+     recursivley sorting an array by the merge sort method.
      Pre: Array, start index, end index, middle index
      Post: Array is partially sorted using comparison of the values at the given indeces
      Return: none
